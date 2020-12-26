@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paleta de Colores Ramdom JS</title>
+  </head>
+  <body>
+    <button onclick="nuevoColor()">Generar nuevos colores</button>
+    <div class="contenedor">
+      <div class="contenido" id="color1">
+        <span id="Ncolor1">#23ac35 </span>
+      </div>
+      <div class="contenido" id="color2">
+        <span id="Ncolor2">#23ac35 </span>
+      </div>
+      <div class="contenido" id="color3">
+        <span id="Ncolor3">#23ac35 </span>
+      </div>
+      <div class="contenido" id="color4">
+        <span id="Ncolor4">#23ac35 </span>
+      </div>
+    </div>
+
+    <script>
+      function nuevoColor() {
+        let aleatorio, color;
+        aleatorio = "0123456789ABCDEF";
+        color = "#";
+        color1 = "#";
+        color2 = "#";
+        color3 = "#";
+        for (var i = 0; i < 6; i++) {
+          color = color + aleatorio[Math.floor(Math.random() * 16)];
+          color1 = color1 + aleatorio[Math.floor(Math.random() * 16)];
+          color2 = color2 + aleatorio[Math.floor(Math.random() * 16)];
+          color3 = color3 + aleatorio[Math.floor(Math.random() * 16)];
+        }
+        document.getElementById("color1").style.background = color;
+        document.getElementById("Ncolor1").innerHTML = color;
+
+        document.getElementById("color2").style.background = color1;
+        document.getElementById("Ncolor2").innerHTML = color1;
+
+        document.getElementById("color3").style.background = color2;
+        document.getElementById("Ncolor3").innerHTML = color2;
+
+        document.getElementById("color4").style.background = color3;
+        document.getElementById("Ncolor4").innerHTML = color3;
+      }
+    </script>
+    <p>Creado por: <a href="https://sergiorodriguezweb.es/">Sergio Web</a></p>
+    <link rel="stylesheet" href="estilo.css" />
+  </body>
+</html>
